@@ -18,7 +18,6 @@ export const Dashboard = () => {
   useEffect(() => {
     if (!token) {
       nav("/login");
-      toast.error("Please login first");
       return;
     }
     fetchprojects();
