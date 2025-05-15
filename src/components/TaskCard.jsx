@@ -42,6 +42,7 @@ export const TaskCard = ({ task, setTasks }) => {
     <div className="max-w-sm p-6 bg-gray-200/50 border border-gray-200 rounded-lg shadow-sm capitalize">
       {isEditing ? (
         <div className="flex flex-col gap-2">
+          <label className="font-medium">Update Title:</label>
           <input
             type="text"
             value={newTitle}
@@ -50,6 +51,8 @@ export const TaskCard = ({ task, setTasks }) => {
             onChange={(e) => setNewTitle(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
           />
+          <label className="font-medium">Update Description:</label>
+
           <input
             type="text"
             value={newDescription}
@@ -57,6 +60,8 @@ export const TaskCard = ({ task, setTasks }) => {
             onChange={(e) => setNewDescription(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
           />
+          <label className="font-medium">Update Task Status:</label>
+
           <select
             value={newStatus}
             onChange={(e) => setNewStatus(e.target.value)}
