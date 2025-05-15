@@ -57,7 +57,10 @@ export const HandleAuht = ({ title, buttontext, submiting, isregister }) => {
         setislogn(true);
         nav("/");
       } catch (error) {
-        toast.error(error?.response?.data?.message || "something went wrong");
+        toast.error(
+          error?.response?.data?.message ||
+            "something went wrong please try it later"
+        );
         setSubmitting(false);
       }
     } else {
@@ -72,7 +75,7 @@ export const HandleAuht = ({ title, buttontext, submiting, isregister }) => {
         setislogn(true);
         nav("/");
       } catch (error) {
-        toast.error(error?.response?.data?.message || "something went wrong");
+        toast.error(error?.response?.data?.message || "something went wrong please try it later");
       }
     }
   };
